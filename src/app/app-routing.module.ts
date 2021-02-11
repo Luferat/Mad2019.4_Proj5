@@ -26,11 +26,18 @@ const routes: Routes = [
     loadChildren: () => import('./pages/about/about.module').then( m => m.AboutPageModule)
   },
 
-  // Se uma rota não existe, exibe 'e404'
+  // 1) Página de visualização de artigo, obtendo o 'id'
+  {
+    path: 'view/:id',
+    loadChildren: () => import('./pages/view/view.module').then( m => m.ViewPageModule)
+  },
+
+  // Se uma rota não existe, exibe 'e404'. Deve ser sempre a ÚLTIMA ROTA!!!!
   {
     path: '**',
     loadChildren: () => import('./pages/e404/e404.module').then( m => m.E404PageModule)
   }
+
 ];
 
 @NgModule({

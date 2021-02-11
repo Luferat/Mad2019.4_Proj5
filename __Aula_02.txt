@@ -5,5 +5,21 @@
 
 3) Edite 'app.component.ts' --> Remover 'public appPages...'
 
-4) Edite 'home.page.ts' --> 1 à 4
+4) Edite 'home.page.ts' --> 1 à 5
    * Vai solicitar a criação do índice!
+
+5) Edite 'home.page.html' conforme o tema
+
+6) Crie a página 'view' --> ionic generate page pages/view
+
+7) Edite 'app-routing.module.ts' para ajustar as rotas
+
+8) Edite 'view.page.html' --> Menu e content
+
+9) Edite 'view.page.ts' --> 1 à 4
+
+10) Edite 'view.page.html' conforme o tema
+
+11) Edite 'global.css' -> estilizar tag <a></a>
+
+

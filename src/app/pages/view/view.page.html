@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Artigo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <div *ngIf="item | async as art">
+
+    <h2>{{ art.title }}</h2>
+
+    <div class="ion-text-end"><small>Em {{ art.date | date: 'dd/MM/yyyy, hh:mm' }}.</small></div>
+
+    <div [innerHTML]="art.text" class="ion-margin-bottom"></div>
+
+    &nbsp;
+
+    <ion-button expand="block" routerLink="/" class="ion-margin-top">
+      <ion-icon slot="start" name="home"></ion-icon>&nbsp;
+      Lista de Artigos
+    </ion-button>
+
+  </div>
+
+</ion-content>
