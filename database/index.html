@@ -1,7 +1,5 @@
 <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-firestore.js"></script>
-
-<!-- Coloque suas configurações do Firebase aqui!!! -->
 <script>
   var firebaseConfig = {
     apiKey: "AIzaSyB1lTc_BobxDWbK3Jg7eVlk9EyFXf9dQaw",
@@ -23,67 +21,67 @@
       intro: 'Quando as coisas não dão certo é porque estão dando errado.',
       text: '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione molestias sunt perspiciatis esse illo ut, sint corrupti tenetur, omnis autem odio. Debitis quos neque dolores architecto beatae rem dignissimos nisi?</p> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, cum. Dolorum veritatis aliquam porro labore aliquid fugiat ipsa minima ab maxime provident quae eum excepturi obcaecati ipsam itaque, ut fugit?</p> <figure> <img src="https://picsum.photos/400/300" alt="Lorem Image"> <figcaption>Lorem Image</figcaption> </figure> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus sed maiores excepturi quis, necessitatibus porro ullam, eius soluta debitis maxime corrupti. Nam delectus asperiores quaerat quia aspernatur est cumque saepe?</p> <h4>Links:</h4> <ul> <li><a href="http://luferat.net/">Site do Fessô</a></li> <li><a href="https://www.youtube.com/channel/UCkN6I-gfJlL5lUj9shkyxPQ">Youtube do Fessô</a></li> <li><a href="https://github.com/Luferat/">GitHub do Fessô</a></li> </ul> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque doloribus adipisci laudantium placeat porro, error deleniti quasi eligendi reiciendis ea perferendis fugit minus impedit deserunt illum officia laboriosam consequuntur quisquam.</p> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque fuga ad tempora harum quo sequi animi?</p>',
       status: 'ativo',
-      img: 'https://picsum.photos/200'
+      img: 'https://picsum.photos/400'
     }
   )
     .then(function (docRef) { console.log("Document written with ID: ", docRef.id); });
 
-    db.collection('articles').add(
+  db.collection('articles').add(
     {
       date: '2020-11-30 22:24:25',
       title: 'Sementes que Germminam Pó',
       intro: 'Plantas plantadas que implantam plantações imaginárias de plantas de espécies especiais.',
       text: '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione molestias sunt perspiciatis esse illo ut, sint corrupti tenetur, omnis autem odio. Debitis quos neque dolores architecto beatae rem dignissimos nisi?</p> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, cum. Dolorum veritatis aliquam porro labore aliquid fugiat ipsa minima ab maxime provident quae eum excepturi obcaecati ipsam itaque, ut fugit?</p> <figure> <img src="https://picsum.photos/400/300" alt="Lorem Image"> <figcaption>Lorem Image</figcaption> </figure> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus sed maiores excepturi quis, necessitatibus porro ullam, eius soluta debitis maxime corrupti. Nam delectus asperiores quaerat quia aspernatur est cumque saepe?</p> <h4>Links:</h4> <ul> <li><a href="http://luferat.net/">Site do Fessô</a></li> <li><a href="https://www.youtube.com/channel/UCkN6I-gfJlL5lUj9shkyxPQ">Youtube do Fessô</a></li> <li><a href="https://github.com/Luferat/">GitHub do Fessô</a></li> </ul> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque doloribus adipisci laudantium placeat porro, error deleniti quasi eligendi reiciendis ea perferendis fugit minus impedit deserunt illum officia laboriosam consequuntur quisquam.</p> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque fuga ad tempora harum quo sequi animi?</p>',
       status: 'ativo',
-      img: 'https://picsum.photos/201'
+      img: 'https://picsum.photos/401'
     },
   )
     .then(function (docRef) { console.log("Document written with ID: ", docRef.id); });
 
-    db.collection('articles').add(
+  db.collection('articles').add(
     {
       date: '2020-12-03 08:09:10',
       title: 'Serração de Serragem',
       intro: 'Do pó ao vinho, da taça ao taco, mexicano sem graça.',
       text: '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione molestias sunt perspiciatis esse illo ut, sint corrupti tenetur, omnis autem odio. Debitis quos neque dolores architecto beatae rem dignissimos nisi?</p> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, cum. Dolorum veritatis aliquam porro labore aliquid fugiat ipsa minima ab maxime provident quae eum excepturi obcaecati ipsam itaque, ut fugit?</p> <figure> <img src="https://picsum.photos/400/300" alt="Lorem Image"> <figcaption>Lorem Image</figcaption> </figure> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus sed maiores excepturi quis, necessitatibus porro ullam, eius soluta debitis maxime corrupti. Nam delectus asperiores quaerat quia aspernatur est cumque saepe?</p> <h4>Links:</h4> <ul> <li><a href="http://luferat.net/">Site do Fessô</a></li> <li><a href="https://www.youtube.com/channel/UCkN6I-gfJlL5lUj9shkyxPQ">Youtube do Fessô</a></li> <li><a href="https://github.com/Luferat/">GitHub do Fessô</a></li> </ul> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque doloribus adipisci laudantium placeat porro, error deleniti quasi eligendi reiciendis ea perferendis fugit minus impedit deserunt illum officia laboriosam consequuntur quisquam.</p> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque fuga ad tempora harum quo sequi animi?</p>',
       status: 'ativo',
-      img: 'https://picsum.photos/202'
+      img: 'https://picsum.photos/402'
     },
   )
     .then(function (docRef) { console.log("Document written with ID: ", docRef.id); });
 
-    db.collection('articles').add(
+  db.collection('articles').add(
     {
       date: '2020-12-05 11:34:00',
       title: 'Primeiro Certo e Tudo Errado',
       intro: 'Se correr, o urso berra, se ficar o urso ataca e a abelha faz mel.',
       text: '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione molestias sunt perspiciatis esse illo ut, sint corrupti tenetur, omnis autem odio. Debitis quos neque dolores architecto beatae rem dignissimos nisi?</p> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, cum. Dolorum veritatis aliquam porro labore aliquid fugiat ipsa minima ab maxime provident quae eum excepturi obcaecati ipsam itaque, ut fugit?</p> <figure> <img src="https://picsum.photos/400/300" alt="Lorem Image"> <figcaption>Lorem Image</figcaption> </figure> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus sed maiores excepturi quis, necessitatibus porro ullam, eius soluta debitis maxime corrupti. Nam delectus asperiores quaerat quia aspernatur est cumque saepe?</p> <h4>Links:</h4> <ul> <li><a href="http://luferat.net/">Site do Fessô</a></li> <li><a href="https://www.youtube.com/channel/UCkN6I-gfJlL5lUj9shkyxPQ">Youtube do Fessô</a></li> <li><a href="https://github.com/Luferat/">GitHub do Fessô</a></li> </ul> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque doloribus adipisci laudantium placeat porro, error deleniti quasi eligendi reiciendis ea perferendis fugit minus impedit deserunt illum officia laboriosam consequuntur quisquam.</p> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque fuga ad tempora harum quo sequi animi?</p>',
       status: 'ativo',
-      img: 'https://picsum.photos/198'
+      img: 'https://picsum.photos/398'
     },
   )
     .then(function (docRef) { console.log("Document written with ID: ", docRef.id); });
 
-    db.collection('articles').add(
+  db.collection('articles').add(
     {
       date: '2020-12-06 21:22:23',
       title: 'Na Maca dos Penalties Hospitalizados',
       intro: 'Mais vale um pássaro na mão, do que dois voando, a não se que esteja acompanhado.',
       text: '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione molestias sunt perspiciatis esse illo ut, sint corrupti tenetur, omnis autem odio. Debitis quos neque dolores architecto beatae rem dignissimos nisi?</p> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, cum. Dolorum veritatis aliquam porro labore aliquid fugiat ipsa minima ab maxime provident quae eum excepturi obcaecati ipsam itaque, ut fugit?</p> <figure> <img src="https://picsum.photos/400/300" alt="Lorem Image"> <figcaption>Lorem Image</figcaption> </figure> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus sed maiores excepturi quis, necessitatibus porro ullam, eius soluta debitis maxime corrupti. Nam delectus asperiores quaerat quia aspernatur est cumque saepe?</p> <h4>Links:</h4> <ul> <li><a href="http://luferat.net/">Site do Fessô</a></li> <li><a href="https://www.youtube.com/channel/UCkN6I-gfJlL5lUj9shkyxPQ">Youtube do Fessô</a></li> <li><a href="https://github.com/Luferat/">GitHub do Fessô</a></li> </ul> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque doloribus adipisci laudantium placeat porro, error deleniti quasi eligendi reiciendis ea perferendis fugit minus impedit deserunt illum officia laboriosam consequuntur quisquam.</p> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque fuga ad tempora harum quo sequi animi?</p>',
       status: 'ativo',
-      img: 'https://picsum.photos/203'
+      img: 'https://picsum.photos/403'
     },
   )
     .then(function (docRef) { console.log("Document written with ID: ", docRef.id); });
 
-    db.collection('articles').add(
+  db.collection('articles').add(
     {
       date: '2020-12-10 11:12:13',
       title: 'Água mole, pedra dura, tanto bate até que fura.',
       intro: 'A persistência para vencer os obstáculos causa a erosão nas rochas pela da vida.',
       text: '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione molestias sunt perspiciatis esse illo ut, sint corrupti tenetur, omnis autem odio. Debitis quos neque dolores architecto beatae rem dignissimos nisi?</p> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, cum. Dolorum veritatis aliquam porro labore aliquid fugiat ipsa minima ab maxime provident quae eum excepturi obcaecati ipsam itaque, ut fugit?</p> <figure> <img src="https://picsum.photos/400/300" alt="Lorem Image"> <figcaption>Lorem Image</figcaption> </figure> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus sed maiores excepturi quis, necessitatibus porro ullam, eius soluta debitis maxime corrupti. Nam delectus asperiores quaerat quia aspernatur est cumque saepe?</p> <h4>Links:</h4> <ul> <li><a href="http://luferat.net/">Site do Fessô</a></li> <li><a href="https://www.youtube.com/channel/UCkN6I-gfJlL5lUj9shkyxPQ">Youtube do Fessô</a></li> <li><a href="https://github.com/Luferat/">GitHub do Fessô</a></li> </ul> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque doloribus adipisci laudantium placeat porro, error deleniti quasi eligendi reiciendis ea perferendis fugit minus impedit deserunt illum officia laboriosam consequuntur quisquam.</p> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque fuga ad tempora harum quo sequi animi?</p>',
       status: 'ativo',
-      img: 'https://picsum.photos/197'
+      img: 'https://picsum.photos/397'
     },
   )
     .then(function (docRef) { console.log("Document written with ID: ", docRef.id); });
