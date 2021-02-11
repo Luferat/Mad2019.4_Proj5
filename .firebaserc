@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "project-five-51160": {
+      "hosting": {
+        "app": [
+          "project-five-51160"
+        ]
+      }
+    }
+  }
+}
