@@ -1,5 +1,9 @@
 1) Edite 'e404.html' --> <ion-button...
 
+2) Edite 'app.component.html' --> Menu 'manual'
+                              --> Mensagem de Copyright no menu
 
+3) Edite 'app.component.ts' --> Remover 'public appPages...'
 
-
+4) Edite 'home.page.ts' --> 1 à 4
+   * Vai solicitar a criação do índice!

@@ -9,7 +9,6 @@ export class E404Page implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
 }

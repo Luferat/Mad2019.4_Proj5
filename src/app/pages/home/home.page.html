@@ -9,7 +9,19 @@
 
 <ion-content class="ion-padding">
 
-  <h2>Página Inicial</h2>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia cumque amet, adipisci culpa, corrupti maxime dignissimos earum impedit delectus totam cum rerum minus minima non sunt facere eum tempora id?</p>
+  <h2>Artigos Recentes</h2>
+
+  <!-- 1. Exibe os artigos -->
+  <div class="article" *ngFor="let item of items | async">
+
+    <ion-card>
+      <img src="{{ item.img }}" alt="{{ item.title }}">
+      <ion-card-header>
+        <ion-card-title>{{ item.title }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>{{ item.intro }}</ion-card-content>
+    </ion-card>
+
+  </div>
 
 </ion-content>
