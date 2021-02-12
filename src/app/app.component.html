@@ -6,15 +6,45 @@
           <ion-list-header>Amarfagafos</ion-list-header>
           <ion-note>Envolvendo para desenvolver.</ion-note>
 
-          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
-            <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">
-              <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
-              <ion-label>{{ p.title }}</ion-label>
+          <ion-menu-toggle auto-hide="false">
+            <ion-item routerDirection="root" routerLink="/" lines="none" detail="false" routerLinkActive="selected">
+              <ion-icon name="home" slot="start"></ion-icon>
+              <ion-label>Início</ion-label>
             </ion-item>
           </ion-menu-toggle>
+
+          <ion-menu-toggle auto-hide="false">
+            <ion-item routerDirection="root" routerLink="/news" lines="none" detail="false" routerLinkActive="selected">
+              <ion-icon name="newspaper" slot="start"></ion-icon>
+              <ion-label>Notícias</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+          <ion-menu-toggle auto-hide="false">
+            <ion-item routerDirection="root" routerLink="/contacts" lines="none" detail="false"
+              routerLinkActive="selected">
+              <ion-icon name="chatbubbles" slot="start"></ion-icon>
+              <ion-label>Faça Contato</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+          <ion-menu-toggle auto-hide="false">
+            <ion-item routerDirection="root" routerLink="/about" lines="none" detail="false"
+              routerLinkActive="selected">
+              <ion-icon name="information-circle" slot="start"></ion-icon>
+              <ion-label>Sobre</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
         </ion-list>
 
       </ion-content>
+
+      <!-- Mensagem de Copyright -->
+      <ion-text class="ion-text-center ion-padding">
+        <small>&copy; Copyright 2021 André Luferat</small>
+      </ion-text>
+
     </ion-menu>
     <ion-router-outlet id="main-content"></ion-router-outlet>
   </ion-split-pane>
