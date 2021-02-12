@@ -15,9 +15,9 @@
   <div class="ion-text-end"><small>Em {{ art.date | date: 'dd/MM/yyyy hh:mm' }}.</small></div>
   <div [innerHTML]="art.text"></div>
 
-  &nbsp;
+  <ion-item-divider></ion-item-divider>  
 
-  <ion-button expand="block" routerLink="/">
+  <ion-button expand="block" routerLink="/" class="ion-margin-top">
     <ion-icon name="home" slot="start"></ion-icon>
      Lista de Artigos
   </ion-button>

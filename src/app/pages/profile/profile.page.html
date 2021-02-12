@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+
+    <!-- 1. Menu principal -->
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+
+    <!-- 2. Título -->
+    <ion-title>Seu perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!-- 3. Exibe perfil do logado -->
+<ion-content class="ion-padding" fullscreen *ngIf="auth.user | async as user">
+
+  <ion-card class="ion-no-margin ion-margin-bottom">
+    <img src="{{user.photoURL}}" alt="{{user.displayName}}">
+    <ion-card-header>
+      <ion-card-subtitle>{{user.email}}</ion-card-subtitle>
+      <ion-card-title>{{user.displayName}}</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+  <p class="ion-margin-bottom">Você fez login usando uma conta do Google. Para editar seu perfil e/ou trocar a
+    senha, clique no botão abaixo:</p>
+  <ion-button class="ion-margin-top ion-margin-bottom" expand="block" (click)="profile()">Editar perfil no Google
+  </ion-button>
+  <p class="ion-margin-top ion-margin-bottom">Para sair deste aplicativo, clique no botão abaixo:</p>
+  <ion-button class="ion-margin-top" expand="block" routerLink="/logout">Logout / Sair</ion-button>
+
+</ion-content>

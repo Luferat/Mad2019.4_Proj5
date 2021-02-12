@@ -1,0 +1,40 @@
+Autenticação
+
+ • Instale o componente 'firebase', comandando:
+
+    npm install firebase
+
+ • Acesse o aplicativo no 'firebase.com';
+ • Menu 'Criação' --> 'Authentication';
+ • Botão [Primeiros passos];
+ • Em 'Sign-in method' --> 'Provedores de login', selecione 'Google' e sete 'Ativar';
+ • Selecione o 'E-mail de suporte do projeto';
+ • Clique no botão [Salvar];
+
+ • Crie as páginas de 'login', 'logout' e 'perfil', comandando:
+
+    ionic generate page pages/login
+    ionic generate page pages/logout
+    ionic generate page pages/profile
+
+ • Ajuste as rotas em 'app-routing.module.ts';
+
+ • Edite 'login.page.html' para adicionar menu e título;
+ • Edite 'logout.page.html' para adicionar menu e título;
+ • Edite 'profile.page.html' para adicionar menu e título;
+
+ • Edite 'login.page.ts' --> 1 à 4;
+ • Edite 'login.page.html', conforme o template;
+
+ • Edite o menu principal em 'app.component.ts' --> 1 e 2
+ • Edite o menu principal em 'app.component.html' --> 1 à 3
+
+ • Edite 'profile.page.ts' --> 1 à 3
+ • Edite 'profile.page.html' --> 3
+
+ • Edite 'logout.page.ts' --> 1 à 3
+ • Edite 'logout.page.html' --> 1
+
+ • Edite 'app-routing.module.ts' para implementar o 'Guards' --> 2 à 7
+
+EOF

@@ -7,7 +7,7 @@
           <ion-note>Envolvendo para desenvolver.</ion-note>
 
           <ion-menu-toggle auto-hide="false">
-            <ion-item routerDirection="root" routerLink="/" lines="none" detail="false" routerLinkActive="selected">
+            <ion-item routerDirection="root" routerLink="/home" lines="none" detail="false" routerLinkActive="selected">
               <ion-icon name="home" slot="start"></ion-icon>
               <ion-label>Início</ion-label>
             </ion-item>
@@ -37,6 +37,39 @@
           </ion-menu-toggle>
 
         </ion-list>
+
+        <!-- 1. Login / Logout de usuário -->
+
+        <!-- 2. Se está logado(a)... -->
+        <ion-list *ngIf="auth.user | async as user; else showLogin">
+
+          <ion-menu-toggle auto-hide="false">
+            <ion-item routerDirection="root" routerLink="/profile" lines="none" detail="false"
+              routerLinkActive="selected">
+              <ion-avatar slot="start">
+                <ion-img src="{{user.photoURL}}"></ion-img>
+              </ion-avatar>
+              <ion-label>
+                {{user.displayName}}
+                <div><small>{{ user.email }}</small></div>
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+        </ion-list>
+
+        <!-- 3. Se não está logado(a) -->
+        <ng-template #showLogin>
+          <ion-menu-toggle auto-hide="false">
+            <ion-item routerDirection="root" routerLink="/login" lines="none" detail="false"
+              routerLinkActive="selected">
+              <ion-avatar slot="start">
+                <ion-img src="../assets/user.png"></ion-img>
+              </ion-avatar>
+              <ion-label>Login / Entrar</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ng-template>
 
       </ion-content>
 
