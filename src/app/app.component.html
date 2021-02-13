@@ -38,6 +38,39 @@
 
         </ion-list>
 
+        <ion-list id="inbox-list">
+
+          <!-- Se usuário está logado -->
+          <ion-menu-toggle auto-hide="false" *ngIf="auth.user | async as user; else showLogin">
+            <ion-item routerDirection="root" routerLink="/profile" lines="none" detail="false"
+              routerLinkActive="selected">
+              <ion-avatar slot="start">
+                <ion-img src="{{user.photoURL}}" alt="{{user.displayName}}"></ion-img>
+              </ion-avatar>
+              <ion-label>
+                {{user.displayName}}
+                <div><small>{{user.email}}</small></div>
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+          <!-- Se usuário não está logado -->
+          <ng-template #showLogin>
+
+            <ion-menu-toggle auto-hide="false">
+              <ion-item routerDirection="root" routerLink="/login" lines="none" detail="false"
+                routerLinkActive="selected">
+                <ion-avatar slot="start">
+                  <ion-img src="../assets/user.png" alt="Faça Login"></ion-img>
+                </ion-avatar>
+                <ion-label>Login / Entrar</ion-label>
+              </ion-item>
+            </ion-menu-toggle>
+
+          </ng-template>
+
+        </ion-list>
+
       </ion-content>
 
       <!-- Mensagem de Copyright -->
