@@ -3,14 +3,14 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>Início</ion-title>
+    <ion-title>Artigos</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <!-- 1. Verifica se os artigos já chegaram -->
 <ion-content class="ion-padding" fullscreen *ngIf="items">
 
-  <h2 class="ion-margin-bottom">Artigos Recentes</h2>
+  <p class="ion-no-margin ion-margin-bottom"><small>Mais recentes aparecem primeiro.</small></p>
 
   <!-- 2. Exibe os artigos -->
   <div *ngFor="let item of items | async">

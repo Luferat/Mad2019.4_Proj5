@@ -10,7 +10,7 @@
 <ion-content class="ion-padding">
 
   <!-- 1. Logout do usuário -->
-  <h2 *ngIf="auth.user | async as user">Olá {{user.displayName}}!</h2>
+  <h2 class="ion-no-margin" *ngIf="auth.user | async as user">Olá {{user.displayName}}!</h2>
   <p class="ion-text-justify">Clique no botão abaixo para confirmar a saída do aplicativo.</p>
   <p>&nbsp;</p>
   <ion-button (click)="logout()" expand="block">
