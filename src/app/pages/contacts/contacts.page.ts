@@ -36,7 +36,7 @@ export class ContactsPage implements OnInit {
     public alert: AlertController
   ) { }
 
-  // 4. Inclua 'void' no 'OnInit'
+  // 4. Se necessário, inclua 'void' no 'OnInit'
   ngOnInit() {
 
     // 5. Cria formulário reativo

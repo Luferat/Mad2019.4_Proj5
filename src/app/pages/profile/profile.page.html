@@ -7,7 +7,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="ion-padding" fullscreen *ngIf="auth.user | async as user">
+<ion-content class="ion-padding" *ngIf="auth.user | async as user">
 
   <ion-card class="ion-no-margin ion-margin-bottom">
     <img src="{{user.photoURL}}" alt="{{user.displayName}}">

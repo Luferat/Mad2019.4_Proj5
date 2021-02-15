@@ -7,9 +7,22 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="ion-padding">
+<!-- News 1) Exibe somente se obteve as notícias -->
+<ion-content class="ion-padding" *ngIf="newsList">
 
-  <p class="ion-no-margin">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia cumque amet, adipisci culpa, corrupti maxime
-    dignissimos earum impedit delectus totam cum rerum minus minima non sunt facere eum tempora id?</p>
+  <!-- News 2) Lista cada notícia (loop) -->
+  <div *ngFor="let item of newsList" class="newsitem">
+
+    <ion-card class="ion-no-margin ion-margin-bottom" (click)="readNews(item.url)">
+      <img *ngIf="item.urlToImage" src="{{ item.urlToImage }}" alt="Imagem indisponível" title="{{ item.title }}">
+      <ion-card-header>
+        <ion-card-subtitle>{{ item.source.name }}</ion-card-subtitle>
+        <ion-card-title>{{ item.title }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content *ngIf="item.description === ''">{{ item.content }}</ion-card-content>
+      <ion-card-content *ngIf="item.description !== ''">{{ item.description }}</ion-card-content>
+    </ion-card>
+
+  </div>
 
 </ion-content>
