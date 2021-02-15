@@ -7,6 +7,15 @@ import { AngularFirestore } from '@angular/fire/firestore';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AlertController } from '@ionic/angular';
 
+// 10. Não permite preencher campos somente com espaços
+import { AbstractControl } from '@angular/forms';
+export function removeSpaces(control: AbstractControl) {
+  if (control && control.value && !control.value.replace(/\s/g, '').length) {
+    control.setValue('');
+  }
+  return null;
+}
+
 @Component({
   selector: 'app-contacts',
   templateUrl: './contacts.page.html',
@@ -36,8 +45,10 @@ export class ContactsPage implements OnInit {
     // 9. Preenche os campos do formulário se usuário estiver logado
     if (this.contactForm) {
       this.auth.onAuthStateChanged((userData) => {
-        this.contactForm.controls.name.setValue(userData.displayName.trim());
-        this.contactForm.controls.email.setValue(userData.email.trim());
+        if (userData) {
+          this.contactForm.controls.name.setValue(userData.displayName.trim());
+          this.contactForm.controls.email.setValue(userData.email.trim());
+        }
       });
     }
   }
@@ -50,28 +61,32 @@ export class ContactsPage implements OnInit {
         '',
         Validators.compose([
           Validators.required,
-          Validators.minLength(3)
+          Validators.minLength(3),
+          removeSpaces
         ])
       ],
       email: [
         '',
         Validators.compose([
           Validators.required,
-          Validators.email
+          Validators.email,
+          removeSpaces
         ])
       ],
       subject: [
         '',
         Validators.compose([
           Validators.required,
-          Validators.minLength(5)
+          Validators.minLength(5),
+          removeSpaces
         ])
       ],
       message: [
         '',
         Validators.compose([
           Validators.required,
-          Validators.minLength(5)
+          Validators.minLength(5),
+          removeSpaces
         ])
       ]
     });
