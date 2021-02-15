@@ -9,7 +9,70 @@
 
 <ion-content class="ion-padding">
 
-  <h2>Faça Contato</h2>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia cumque amet, adipisci culpa, corrupti maxime dignissimos earum impedit delectus totam cum rerum minus minima non sunt facere eum tempora id?</p>
+  <p class="ion-no-margin">Preencha o formulário abaixo para entrar em contato com a equipe do aplicativo.</p>
+
+  <p class="ion-text-center"><small>
+      <ion-text color="danger">Preencha todos os campos.</ion-text>
+    </small></p>
+
+  <form [formGroup]="contactForm" (ngSubmit)="contactSend()">
+
+    <ion-list lines="full" class="ion-no-padding">
+
+      <ion-item>
+        <ion-label for="name" position="floating" color="primary">
+          Seu nome:
+          <ion-text color="danger" *ngIf="contactForm.controls.name.errors">
+            <small *ngIf="contactForm.controls.name.errors.required">* Obrigatório</small>
+            <small *ngIf="contactForm.controls.name.errors.minlength">* Inválido</small>
+          </ion-text>
+        </ion-label>
+        <ion-input type="text" id="name" name="name" formControlName="name" placeholder="Seu nome completo">
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label for="email" position="floating" color="primary">
+          E-mail:
+          <ion-text color="danger" *ngIf="contactForm.controls.email.errors">
+            <small *ngIf="contactForm.controls.email.errors.required">* Obrigatório</small>
+            <small *ngIf="contactForm.controls.email.errors.email">* Inválido</small>
+          </ion-text>
+        </ion-label>
+        <ion-input type="text" id="email" name="email" formControlName="email" placeholder="Seu e-mail principal">
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label for="subject" position="floating" color="primary">
+          Assunto:
+          <ion-text color="danger" *ngIf="contactForm.controls.subject.errors">
+            <small *ngIf="contactForm.controls.subject.errors.required">* Obrigatório</small>
+            <small *ngIf="contactForm.controls.subject.errors.minlength">* Inválido</small>
+          </ion-text>
+        </ion-label>
+        <ion-input type="text" id="subject" name="subject" formControlName="subject" placeholder="Assunto do contato">
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label for="message" position="floating" color="primary">
+          Mensagem:
+          <ion-text color="danger" *ngIf="contactForm.controls.message.errors">
+            <small *ngIf="contactForm.controls.message.errors.required">* Obrigatório</small>
+            <small *ngIf="contactForm.controls.message.errors.minlength">* Inválido</small>
+          </ion-text>
+        </ion-label>
+        <ion-textarea rows="1" type="text" id="message" name="message" formControlName="message"
+          placeholder="Texto do contato" autoGrow="true"></ion-textarea>
+      </ion-item>
+
+    </ion-list>
+
+    <ion-button type="submit" expand="block" class="ion-margin-vertical" [disabled]="contactForm.invalid">
+      Enviar
+    </ion-button>
+
+  </form>
 
 </ion-content>
