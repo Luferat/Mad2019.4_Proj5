@@ -1,0 +1,42 @@
+Nesta atividade, vamos contruir o formulário de contatos:
+
+ • Construa o formulário usando "Angular ReactiveForms":
+
+    Edite "app/pages/contacts/contacts.module.ts" → 1 à 2
+    Edite "app/pages/contacts/contacts.page.ts" → 1 à 7
+    Edite "app/pages/contacts/contacts.page.html" → *
+
+ • Adicione as regras das coleções no Firestore:
+
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Artigos só podem ser lidos
+    match /articles/{allArticles} {
+      allow write: if false;
+      allow read: if true;
+    }
+
+    // Contatos só podem ser enviados
+    match /contacts/{messages} {
+      allow write: if true;
+      allow read: if false;
+    }
+
+    // Quaisquer outros documentos estão bloqueados
+    match /{document} {
+      allow read, write: if false;
+    }
+  }
+}
+
+ • Processe o envio do formulário:
+
+ • Edite "app/pages/contacts/contacts.page.ts" → 7 à 9
+
+ • Conclusão:
+
+    Compile, teste as funcionalidades e depois, faça o "merge" com o branch "master".
+
+EOF
