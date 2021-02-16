@@ -3,8 +3,10 @@ import { Component, OnInit } from '@angular/core';
 // 1. Importa dependências
 import { AngularFireAuth } from '@angular/fire/auth';
 import { Router } from '@angular/router';
-import { AlertController } from '@ionic/angular';
 import firebase from 'firebase/app';
+
+// 3.1) Importa serviços de uso geral
+import { AppService } from '../../services/app.service';
 
 @Component({
   selector: 'app-login',
@@ -17,8 +19,10 @@ export class LoginPage implements OnInit {
 
     // 2. Injeta dependências
     public auth: AngularFireAuth,
-    private alertCtrl: AlertController,
     private router: Router,
+
+    // 3.2) Injeta serviços de uso geral
+    private app: AppService
   ) { }
 
   ngOnInit() { }
@@ -28,31 +32,14 @@ export class LoginPage implements OnInit {
       .then(
         (data) => {
 
-          // Exibe feedback
-          this.myAlert(
+          // 3.3) Exibe feedback usando service 'app.myAlert'
+          this.app.myAlert(
             `Olá ${data.user.displayName}!`,
-            'Você já pode acessar todos os recursos do aplicativo.'
+            'Você já pode acessar todos os recursos do aplicativo.',
+            () => { this.router.navigate(['/home']); }
           );
         }
       )
       .catch((error) => { console.log(error) });
   }
-
-  // Método que exibe popup
-  async myAlert(title: string, text: string) {
-    const alert = await this.alertCtrl.create({
-      header: title,
-      message: text,
-      buttons: [{
-        text: 'Ok',
-        handler: () => {
-
-          // Vai para a 'home'
-          this.router.navigate(['/home']);
-        }
-      }]
-    });
-    alert.present();
-  }
 }
-

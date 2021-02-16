@@ -1,0 +1,7 @@
+Ajustes Seguintes à Aula 3 (Sugestões)
+
+ • Ajustes dos títulos e conteúdos das páginas;
+ • Ajustes no menu principal;
+ • Criação do 'service' com funções de uso geral:
+
+    ionic generate service services/app
