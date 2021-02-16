@@ -1,0 +1,10 @@
+Nesta atividade, vamos construir a seção de notícias:
+
+ • Edite 'news.module.ts' --> 1 e 2
+ • Edite 'news.page.ts' --> 1 à 7
+ • Edite 'news.page.html' --> 1 e 2
+ • Conclusão:
+
+    Compile, teste as funcionalidades e depois, faça o "merge" com o branch "master".
+
+EOF
