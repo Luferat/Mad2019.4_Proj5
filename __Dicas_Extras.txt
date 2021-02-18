@@ -23,3 +23,23 @@ ion-header ion-img {
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 DICA 2 --> Splash Screen
+
+ * O Capacitor dá suporte para 'splash screen' nativa, mas usa o Cordova como dependência para tal.
+
+  • Edite 'capacitor.config.json':
+
+ ...
+   "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0,
+      "launchAutoHide": true,
+      "backgroundColor": "#ffffffff"
+      }
+  },
+...
+
+ • Crie uma imagem para a splash ou use uma existente;
+ • Salve a imagem em 'assets';
+ • Edite 'app.component.ts' --> 2.1 à 2.3
+ • Edite 'app.component.html' --> 2.1 à 2.2
+ • Edite 'app.component.scss' --> 2.1
