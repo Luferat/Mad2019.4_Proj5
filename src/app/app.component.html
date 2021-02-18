@@ -1,9 +1,9 @@
-<ion-app>
+<ion-app *ngIf="!splash">
   <ion-split-pane contentId="main-content">
     <ion-menu contentId="main-content" type="overlay">
       <ion-content>
         <ion-list id="inbox-list">
-          <ion-list-header>Amarfagafos</ion-list-header>
+          <ion-list-header>Marfagafos</ion-list-header>
           <ion-note>Envolvendo para desenvolver.</ion-note>
 
           <ion-menu-toggle auto-hide="false">
@@ -82,3 +82,10 @@
     <ion-router-outlet id="main-content"></ion-router-outlet>
   </ion-split-pane>
 </ion-app>
+
+<div class="splash" *ngIf="splash">
+  <img src="../assets/myicon.png" alt="Marfagafos">
+  <h1 class="ion-margin-bottom"><strong>MARFAGAFOS</strong></h1>
+  <h2><ion-spinner name="lines" color="dark"></ion-spinner></h2>
+</div>
+

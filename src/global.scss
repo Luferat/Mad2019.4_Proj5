@@ -28,10 +28,16 @@
 
 /* Links */
 a {
-    color: steelblue;
-    text-decoration: none;
+  color          : steelblue;
+  text-decoration: none;
 }
 
 a:hover {
-    color: orangered;
+  color: orangered;
+}
+
+ion-header ion-img {
+  width : 32px;
+  height: 32px;
+  margin-right: 1rem;
 }

@@ -1,12 +1,12 @@
 {
-  "appId": "luferat.com.github.amarfagafos",
-  "appName": "amarfagafos",
+  "appId": "luferat.com.github.marfagafos",
+  "appName": "marfagafos",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www",
   "plugins": {
     "SplashScreen": {
-      "launchShowDuration": 0
+      "launchShowDuration": 3000
     }
   },
   "cordova": {}

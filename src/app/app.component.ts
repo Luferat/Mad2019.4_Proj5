@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 // 1. Importa dependências
 import { AngularFireAuth } from '@angular/fire/auth';
@@ -8,10 +8,18 @@ import { AngularFireAuth } from '@angular/fire/auth';
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+
+  private splash = true;
+
   constructor(
 
     // 2. Injeta dependências
-    public auth: AngularFireAuth,
+    private auth: AngularFireAuth,
   ) { }
+
+  ngOnInit() {
+
+    const timer = setTimeout(() => { this.splash = false; }, 2000);
+  }
 }

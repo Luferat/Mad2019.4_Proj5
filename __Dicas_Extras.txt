@@ -1,0 +1,25 @@
+DICA 1 --> Adicionando um logo/ícone ao App
+
+ • Adicione uma imagem 'appicon.png' ou 'appicon.jpg' de pelo menos 127px x 127px para ser o logo/ícone;
+ • A imagem deve ser colocada no diretório 'assets';
+ • Edite 'index.html' para alterar '<link rel="icon" ...';
+ • Edite 'global.scss' para formatar o logo:
+
+...
+ion-header ion-img {
+  width : 32px;
+  height: 32px;
+  margin-right: 1rem;
+}
+
+ • Edite 'home.page.html' para adicionar o ícone abaixo do título:
+
+<ion-img slot="end" src="../../../assets/appicon.png" routerLink="/home"></ion-img>
+
+ * Observe que o logo roteia para 'home'.
+
+ • Repita para todas as páginas;
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+DICA 2 --> Splash Screen
