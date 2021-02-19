@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">marfagafos</string>
+    <string name="title_activity_main">marfagafos</string>
+    <string name="package_name">marfagafos.com.github.luferat</string>
+    <string name="custom_url_scheme">marfagafos.com.github.luferat</string>
+</resources>

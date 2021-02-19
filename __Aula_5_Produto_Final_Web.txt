@@ -1,0 +1,53 @@
+Publicando aplicativo no 'GitHub Pages':
+
+ • Inicie o aplicativo e teste todas as funcionalidades;
+ • Encerre o aplicativo;
+ • Confira se o Git está no branch 'master' ou 'main';
+ • Configure o 'Capacitor', comandando:
+
+    npx cap init [appName] [appId]
+
+ Exemplo:
+
+    npx cap init marfagafos marfagafos.com.github.luferat
+
+ • Faça o "build" final do aplicativo, comandando:
+
+    ionic build
+
+ * Observe que será criado um novo diretório 'www' na raiz do projeto.
+   Este diretório contém o aplicativo Web pronto para 'deploy'.
+
+ • Renomeie o diretório 'www' para 'docs';
+ • Faça o commit e push do branch 'master' (ou main) para o GitHub.com;
+ • Acesse o repositório do aplicativo no GitHub.com;
+ • Confira a presença do diretório 'docs' na raiz do projeto;
+ • Clique na guia 'Settings' do repositório;
+ • Em 'GitHub Pages', na opção 'Source':
+   • Selecione o branch 'master';
+   • Selecione o 'folder' '/docs';
+   • Clique no botão [Save].
+ • Após a recarga da página, retorne na seção 'GitHub Pages';
+ • Copie o endereço Web do aplicativo, como listado em 'Your site is published at [URL]';
+ • No editor, abra o arquivo 'docs/index.html';
+ • Altere a linha:
+
+      <base href="/"/>
+   
+   para
+
+      <base href="Endereço do app no GitHub Pages"/>
+
+ Exemplo:            Observe a '/' no final <─────────────┐
+                                                          │
+   <base href="https://luferat.github.io/Mad2019.4_Proj5/"/>
+                         │                   |
+       Seu login no <────┘                   └──> Nome do repositório
+       GitHub.com                                 do app no gitHub.com
+
+ • Faça o commit e o push do aplicativo novamente;
+ • Acesse o endereço do aplicativo Web para testar.
+
+ * Pode levar alguns minutos para atualizar o arquivo 'index.html' após editado.
+   Tenha paciência e acompanhe a atualização pelo código fonte do site.
+

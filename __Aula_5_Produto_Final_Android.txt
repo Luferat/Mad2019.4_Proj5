@@ -1,0 +1,50 @@
+Publicando aplicativo no 'Android':
+
+ • Inicie o aplicativo e teste todas as funcionalidades;
+ • Encerre o aplicativo;
+ • Confira se o Git está no branch 'master' ou 'main';
+ • Configure o 'Capacitor', comandando:
+
+    npx cap init [appName] [appId]
+
+ Exemplo:
+
+    npx cap init marfagafos marfagafos.com.github.luferat
+
+ • Faça o "build" final do aplicativo, comandando:
+
+    ionic build
+
+ * Observe que será criado um novo diretório 'www' na raiz do projeto.
+
+ • Adicione a plataforma Android, comandando:
+
+      npx cap add android
+
+ * Observe que será criado um novo diretório 'android' na raiz do projeto.
+
+ • Neste momento, prepare seu celular "Android":
+   • Feche todos os aplicativos abertos no Android;
+   • Ative as "Opções do desenvolvedor" do Android;
+      * Pesquise na Web, como fazer isso no seu aparelho. Cada um tem um jeito.
+   • Acesse as "Opções do desenvolvedor" no Android;
+   • Ligue a opção "Depuração USB";
+   • Volte à tela inicial do Android;
+ 
+ • Conecte o celular Android ao PC e confirme se a conexão ocorreu;
+   • Se necessário, autorize a conexão no Android;
+   • Aparece a notificação "Depuração USB conectada".
+
+ • Compile a versão 'Android', pelo 'Android Studio', comandando:
+
+      npx cap open android
+
+ • O Android Studio será iniciado e o processo de compilação é automático;
+ • Aguade... Aguarde muito...
+ • Se tudo deu certo, o aplicativo abrirá no Android Studio;
+ • Verifique se seu dispositivo é listado na seção 'Devices' (barra superior);
+ • Quando ele aparecer, clique no 'Play' ao lado dele;
+ • Aguade... Aguarde muito...
+ • Se tudo deu certo, o aplicativo abrirá no dispositivo Android.
+
+ * O aplicativo fica disponível com o ícone do 'Capacitor' ( ┤├ ), no dispositivo.
