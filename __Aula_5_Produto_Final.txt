@@ -1,0 +1,23 @@
+Publicando aplicativo no 'GitHub Pages':
+
+ • Inicie o aplicativo e teste todas as funcionalidades;
+ • Encerre o aplicavito;
+ • Confira se o Git está no branch 'master' ou 'main';
+ • Configure o 'Capacitor', comandando:
+
+    npx cap init [appName] [appId]
+
+ Exemplo:
+
+    npx cap init marfagafos marfagafos.com.github.luferat
+
+ • Faça o "build" final do aplicativo, comandando:
+
+    ionic build
+
+ * Observe que será criado um novo diretório 'www' na raiz do projeto.
+
+ • Renomeie o diretório 'www' para 'docs';
+ • Faça o commit e push do branch 'master' (ou main) para o GitHub.com;
+ • 
+

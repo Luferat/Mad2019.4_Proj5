@@ -23,11 +23,11 @@ export class NewsPage implements OnInit {
     private http: HttpClient
   ) { }
 
-  ngOnInit() {
+  ngOnInit(): any {
 
     // 4. Obtendo as notícias da API REST (JSON) usando HTTP
     this.http.get(this.apiURL).subscribe(
-      (data) => {
+      (data: any) => {
 
         // 5. Atribui à view de notícias
         this.newsList = data.articles.slice(0, this.apiItens);
