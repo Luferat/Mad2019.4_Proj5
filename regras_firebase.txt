@@ -1,0 +1,28 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Artigos
+    match /articles/{allArticles} {
+      allow write: if false;
+      allow read: if true;
+    }
+
+    // Contatos
+    match /contacts/{messages} {
+      allow write: if true;
+      allow read: if false;
+    }
+    
+    // Sobre
+    match /about/{messages} {
+      allow write: if false;
+      allow read: if true;
+    }
+
+    // Quaisquer outros documentos estão bloqueados
+    match /{document} {
+      allow read, write: if false;
+    }
+  }
+}
