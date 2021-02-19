@@ -16,6 +16,7 @@ Publicando aplicativo no 'GitHub Pages':
     ionic build
 
  * Observe que será criado um novo diretório 'www' na raiz do projeto.
+   Este diretório contém o aplicativo Web pronto para 'deploy'.
 
  • Renomeie o diretório 'www' para 'docs';
  • Faça o commit e push do branch 'master' (ou main) para o GitHub.com;
