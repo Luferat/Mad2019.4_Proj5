@@ -20,5 +20,6 @@ Publicando aplicativo no 'GitHub Pages':
 
  • Renomeie o diretório 'www' para 'docs';
  • Faça o commit e push do branch 'master' (ou main) para o GitHub.com;
+ • Acesse o repositório do aplicativo no GitHub.com;
  • 
 
