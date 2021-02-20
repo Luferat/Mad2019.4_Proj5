@@ -11,11 +11,12 @@ import { HttpClient } from '@angular/common/http';
 export class NewsPage implements OnInit {
 
   // 3. Atributos
+  private apiProxy = 'https://thingproxy.freeboard.io/fetch/';
   private apiKey = 'f6b1d5dc3f4c47c483446e353984603f'; // Obtenha de 'newsapi.org'
   private apiQuery = 'programação'; // Notícias sobre...
   private apiItens = 10; // Exibir ... notícias (máximo 20)
-  public apiURL = `http://cors.io/?https://newsapi.org/v2/everything?apiKey=${this.apiKey}&source=google-news-br&language=pt&q=${this.apiQuery}`;
-  private newsList: any; // Armazena as notícias recebidas
+  public apiURL = `${this.apiProxy}https://newsapi.org/v2/everything?apiKey=${this.apiKey}&source=google-news-br&language=pt&q=${this.apiQuery}`;
+  public newsList: any; // Armazena as notícias recebidas
 
   constructor(
 
