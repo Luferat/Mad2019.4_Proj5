@@ -30,7 +30,7 @@ let NewsPage = class NewsPage {
         this.apiKey = 'f6b1d5dc3f4c47c483446e353984603f'; // Obtenha de 'newsapi.org'
         this.apiQuery = 'programação'; // Notícias sobre...
         this.apiItens = 10; // Exibir ... notícias (máximo 20)
-        this.apiURL = `https://newsapi.org/v2/everything?apiKey=${this.apiKey}&source=google-news-br&language=pt&q=${this.apiQuery}`;
+        this.apiURL = `http://cors.io/?https://newsapi.org/v2/everything?apiKey=${this.apiKey}&source=google-news-br&language=pt&q=${this.apiQuery}`;
     }
     ngOnInit() {
         // 4. Obtendo as notícias da API REST (JSON) usando HTTP

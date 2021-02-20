@@ -46,7 +46,19 @@ Publicando aplicativo no 'GitHub Pages':
        GitHub.com                                 do app no gitHub.com
 
  • Faça o commit e o push do aplicativo novamente;
- • Acesse o endereço do aplicativo Web para testar.
+ • Acesse o endereço do aplicativo Web para testar;
+
+Precisamos liberar o domínio no 'Authentication'...
+
+ • Copie da URL, o endereço do domínio, por exemplo:
+ 
+      Se minha URL é --> https://luferat.github.io/Mad2019.4_Proj5/
+      Meu domínio é  --> luferat.github.io
+
+ • Acesse o console da aplicação no Firebase.com;
+ • Acesse 'Authentication' --> guia 'Sign-in method';
+ • Na seção 'Domínios autorizados', clique no botão [Adicionar domínio];
+ • Cole o domínio do seu github (acima) e clique em [Adicionar];
 
  * Pode levar alguns minutos para atualizar o arquivo 'index.html' após editado.
    Tenha paciência e acompanhe a atualização pelo código fonte do site.
